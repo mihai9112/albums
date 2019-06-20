@@ -3,7 +3,7 @@ Simple Web API for .NET Core consuming JsonPlaceHolder Api
 
 ## Please read
 
-## The chanlenge
+## The challenge
 Create a Web API that when called:
 
 * Calls, combines and returns the results of:
