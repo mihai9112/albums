@@ -1,6 +1,18 @@
 # RunPath Web API
 Simple Web API for .NET Core consuming JsonPlaceHolder Api
 
+## Please read
+
+## The chanlenge
+Create a Web API that when called:
+
+* Calls, combines and returns the results of:
+    * http://jsonplaceholder.typicode.com/photos
+    * http://jsonplaceholder.typicode.com/albums
+* Allows an integrator to filter on the user id – so just returns the albums and photos relevant to a single user.
+
+## The implementation
+
 To run, navigate to the root directory and input: `docker-compose up --build -d`. This will run the web api into a docker container, available at `http://localhost:5050`.
 
 If you don't have docker installed please see [how to install Docker Desktop](https://www.docker.com/products/docker-desktop)
@@ -8,6 +20,8 @@ If you don't have docker installed please see [how to install Docker Desktop](ht
 The API is designed followint Level 3 REST using Hypermedia links. Please have a look and the [REST Maturity Model](https://martinfowler.com/articles/richardsonMaturityModel.html) posted by Marting Fowler.
 
 The project can also be opened in your editor of your choosing and run it in debug mode, the port will be assigned automatically.
+
+The project can also be run using the command `dotnet run` and to run all the tests `dotnet test`. Please make sure you have the latest [Dot Net Core SDK](https://dotnet.microsoft.com/download)
 
 Once you have the docker container up and running, using Postman ping the endpoint: GET `http://localhost:5050`. The following response will be returned:
 
@@ -83,6 +97,12 @@ Let's explore the `user-album-get` link by calling the endpoint: GET `http://loc
 This endpoint gets us all the albums, with or without photos available to a specified user. It aggregates around the userId in the endpoint.
 
 
+##Technical comments
 
+This exercise can be improved to the n'th degree, but in the interest of the law of diminishing interests, I've stopped at the basic  working implementation. This solution meets all the requirements in the exercise.
+
+Of course, more integration and unit tests checking unhappy paths as well. More assertions around checking the correct response details. But these things can be added later, the infrastructure is there.
+
+I hope you enjoyed reading the documention and hope you appreciate the implementation. If you have any feedback, please let me know
 
 
