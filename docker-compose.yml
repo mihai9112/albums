@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  runpath:
+    build:
+      context: .
+      dockerfile: ./src/RunPath.WebApi/Dockerfile
+    container_name: runpath
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://*:5050
+    ports:
+      - "5050:5050"
