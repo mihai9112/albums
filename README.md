@@ -97,7 +97,7 @@ Let's explore the `user-album-get` link by calling the endpoint: GET `http://loc
 This endpoint gets us all the albums, with or without photos available to a specified user. It aggregates around the userId in the endpoint.
 
 
-##Technical comments
+## Technical comments
 
 This exercise can be improved to the n'th degree, but in the interest of the law of diminishing interests, I've stopped at the basic  working implementation. This solution meets all the requirements in the exercise.
 
